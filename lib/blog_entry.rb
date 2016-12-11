@@ -10,7 +10,7 @@ class BlogEntry
     blog_entry = {
         author: author,
         title: title,
-        text: text
+        textarea: text
     }
 
     @blogs.push blog_entry
@@ -21,3 +21,5 @@ class BlogEntry
   end
 
 end
+
+

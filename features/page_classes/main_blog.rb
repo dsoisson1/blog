@@ -7,13 +7,12 @@ class MainBlog
 
   page_url 'localhost:4567'
 
-  button(:submit, :id => 'submit', :value => 'Add')
+  button(:newBlog, id: 'newBlog')
 
 
   def first_blog_title
-    @browser.div(id: 'post-0', class: 'post').p.title
-    blog = Blog.select(:id, :title, :date).find(1)
-
+    @browser.div(id: 'post-0').text
   end
 
 end
+

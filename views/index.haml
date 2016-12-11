@@ -1,11 +1,15 @@
 %strong{:class => "code", :id => "message"} My Top Ten Blogs
-%html
 
-  - all_blogs.each_with_index do |n,i|
-    %div{id: "post-#{i}", class: "post"}
-      %p= n.author
-      %p= n.title
-      %p= n.text
-      %br
+- all_blogs.each_with_index do |n,i|
+  %div{id: "post-#{i}", class: "post"}
+    %p= n.author
+    %p= n.title
+    %p= n.text
+  %hr
 
-  %input{:type => "submit", :id => "submit", :value => "New"}
+%form{:action => "new_blog", :method => "get"}
+  %br
+    %div{id: "new_blog_button"}
+      %input{:type => "submit", :id => "newBlog", :value => "New"}
+
+

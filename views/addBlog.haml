@@ -1,5 +1,5 @@
 %strong{:class => "code", :id => "message"} Add a Blog
-%form{:action => "blog", :method => "post"}
+%form{:action => "add_blog", :method => "post"}
   %br
     Author:
     %input{:type => "text", :name => "author"}
@@ -8,6 +8,8 @@
     %input{:type => "text", :name => "title"}
   %br
     Text:
-    %input{:type => "text", :name => "text"}
+    %input{:type => "textarea", :name => "textarea"}
   %br
     %input{:type => "submit", :id => "submit", :value => "Submit"}
+
+
