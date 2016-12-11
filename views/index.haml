@@ -1,0 +1,11 @@
+%strong{:class => "code", :id => "message"} My Top Ten Blogs
+%html
+
+  - all_blogs.each_with_index do |n,i|
+    %div{id: "post-#{i}", class: "post"}
+      %p= n.author
+      %p= n.title
+      %p= n.text
+      %br
+
+  %input{:type => "submit", :id => "submit", :value => "New"}

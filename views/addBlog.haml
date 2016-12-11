@@ -1,0 +1,13 @@
+%strong{:class => "code", :id => "message"} Add a Blog
+%form{:action => "blog", :method => "post"}
+  %br
+    Author:
+    %input{:type => "text", :name => "author"}
+  %br
+    Title:
+    %input{:type => "text", :name => "title"}
+  %br
+    Text:
+    %input{:type => "text", :name => "text"}
+  %br
+    %input{:type => "submit", :id => "submit", :value => "Submit"}

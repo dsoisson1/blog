@@ -1,0 +1,22 @@
+%strong{:class => "code", :id => "message"} A Single Blog
+%html
+  %head
+    %title Specific Blog Entry
+  %body
+    #frame
+      %header
+        %h2 Talking about random stuff
+        %p This Rocks
+        %p This is the Bomb
+      %footer
+        %author By Duane Soisson
+    %br
+    #frame
+      %h3 Comments
+      %p Comment 1
+      %p Comment 2
+      %p Comment 3
+      %form{:action => "commentBlog", :method => "post"}
+        %input{:type => "submit", :id => "submit", :value => "Add Comment"}
+
+
