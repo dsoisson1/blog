@@ -1,15 +1,21 @@
 %strong{:class => "code", :id => "message"} My Top Ten Blogs
 
-- all_blogs.each_with_index do |n,i|
-  %div{id: "post-#{i}", class: "post"}
-    %p= n.author
-    %p= n.title
-    %p= n.text
-  %hr
-
 %form{:action => "new_blog", :method => "get"}
   %br
     %div{id: "new_blog_button"}
       %input{:type => "submit", :id => "newBlog", :value => "New"}
+
+
+- blogEntry[0,10].each_with_index do |n, i|
+  %div{id: "post-#{i}", class: "post"}
+    %p= n.author
+    %p= n.title
+    %p= n.textarea
+  %form{:action => "readBlog", :method => "get"}
+    %input{:type => "hidden", :name => "i", :value => "#{i}"}
+    %br
+      %div{id: "read_blog_button"}
+        %input{:type => "submit", :id => "readBlog", :value => "Read"}
+  %hr
 
 

@@ -1,0 +1,4 @@
+add_blog:
+  author: ~full_name
+  title: ~title
+  textarea: ~sentences
